@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar React</title>
+     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     <style>
+        .text-success {
+            color: #b00b1e;
+        }
+     </style>
+</head>
+<body>
+    <div id="app"></div>
+
+                <!-- REACT -->
+    <!-- <script type="text/javascript">
+        const root = ReactDOM.createRoot(document.getElementById("app"))
+        root.render(
+            React.createElement(
+                'h1',
+                {style : {color : '#2AC025',
+                    'font-family' : 'aria'
+                }},
+                'YE'
+            )
+        )
+    </script> -->
+
+    <!-- JSX -->
+    <!-- <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("app"))
+
+    //      root.render(
+    //      <>
+    //      <h1 class="text-success">JSX</h1>
+    //      <p>YE</p>
+    //      </>
+    //      )
+
+    </script> -->
+
+    <!-- babel -->
+     <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("app"))
+
+        function Header(props) {
+            return <h1>YE {props.title}</h1>
+        }
+        function Footer() {
+            return <h6>&copy; 2024 ye</h6>
+        }
+
+        function HomePage() {
+            const mahasiswa =["ED", "TED", "DOE"];
+            return <>
+                <Header title='What' />
+                <Header title='IDC' />
+                <p>BE</p>
+                <ul>
+                    {
+                        mahasiswa.map((mhs)=>(
+                            <li>key={mhs} > {mhs}</li>
+                        ))
+                    }
+                    </ul>
+                <Footer />
+            </>;
+        }
+        root.render(<HomePage />)
+     </script>
+</body>
+</html>
