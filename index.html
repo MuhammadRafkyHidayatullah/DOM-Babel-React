@@ -56,7 +56,19 @@
         }
 
         function HomePage() {
-            const mahasiswa =["ED", "TED", "DOE"];
+            const mahasiswa =[{
+                npm: '001',
+                nama: 'jhon'
+            },
+            {
+                npm:'002',
+                nama:'Mattide'
+            },
+            {
+                npm:'003',
+                nama: 'Bart'
+            }
+            ]; 
             return <>
                 <Header title='What' />
                 <Header title='IDC' />
@@ -64,7 +76,7 @@
                 <ul>
                     {
                         mahasiswa.map((mhs)=>(
-                            <li>key={mhs} > {mhs}</li>
+                            <li key= {mhs.npm}>{mhs.nama}</li>
                         ))
                     }
                     </ul>
